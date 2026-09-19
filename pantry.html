@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Pantry - FreshCart</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-icon">🛒</span>
+            <span>Fresh<span class="green">Cart</span></span>
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pantry.html" class="active">Pantry</a>
+            <a href="index.html#features">Features</a>
+        </nav>
+
+        <a href="index.html" class="nav-button">
+            Home
+        </a>
+
+    </header>
+
+
+    <!-- Pantry Header -->
+    <section class="pantry-header">
+
+        <div>
+            <span class="small-title">YOUR KITCHEN</span>
+
+            <h1>
+                My <span>Pantry</span>
+            </h1>
+
+            <p>
+                Keep track of the groceries you have at home
+                and know what you need to buy.
+            </p>
+        </div>
+
+        <div class="pantry-icon">
+            🧺
+        </div>
+
+    </section>
+
+
+    <!-- Pantry Controls -->
+    <section class="pantry-container">
+
+        <div class="pantry-top">
+
+            <div>
+                <h2>Pantry Items</h2>
+
+                <p>
+                    Manage the items currently available in your kitchen.
+                </p>
+            </div>
+
+            <button class="add-button" id="addItemButton">
+                + Add Item
+            </button>
+
+        </div>
+
+
+        <!-- Search -->
+        <div class="search-box">
+
+            <span>🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search your pantry..."
+            >
+
+        </div>
+
+
+        <!-- Categories -->
+        <div class="category-buttons">
+
+            <button class="category active-category">
+                All Items
+            </button>
+
+            <button class="category">
+                🥦 Fruits & Vegetables
+            </button>
+
+            <button class="category">
+                🥛 Dairy
+            </button>
+
+            <button class="category">
+                🍚 Staples
+            </button>
+
+        </div>
+
+
+        <!-- Pantry Items -->
+        <div class="pantry-grid" id="pantryGrid">
+
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            🛒 Fresh<span>Cart</span>
+        </div>
+
+        <p>
+            Shop smarter. Stay organized. Live fresher.
+        </p>
+
+        <p class="copyright">
+            © 2026 FreshCart. Grocery shopping made simple.
+        </p>
+
+    </footer>
+    <div class="modal" id="addItemModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            &times;
+        </button>
+
+        <h2>Add Pantry Item</h2>
+
+        <p class="modal-description">
+            Add a grocery item to your pantry.
+        </p>
+
+        <label for="itemName">Item Name</label>
+
+        <input
+            type="text"
+            id="itemName"
+            placeholder="Example: Bread"
+        >
+
+        <label for="itemCategory">Category</label>
+
+        <select id="itemCategory">
+
+            <option value="">Select category</option>
+
+            <option value="fruits">
+                Fruits
+            </option>
+
+            <option value="vegetables">
+                Vegetables
+            </option>
+
+            <option value="dairy">
+                Dairy
+            </option>
+
+            <option value="staples">
+                Staples
+            </option>
+
+        </select>
+
+        <div class="modal-buttons">
+
+            <button class="cancel-button" id="cancelButton">
+                Cancel
+            </button>
+
+            <button class="save-button" id="saveItemButton">
+                Add Item
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- Edit Pantry Item Modal -->
+
+<div class="modal" id="editItemModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeEditModal">
+            &times;
+        </button>
+
+        <h2>Edit Pantry Item</h2>
+
+        <p class="modal-description">
+            Update your pantry item.
+        </p>
+
+        <label for="editItemName">Item Name</label>
+
+        <input
+            type="text"
+            id="editItemName"
+            placeholder="Example: Bread"
+        >
+
+        <label for="editItemCategory">Category</label>
+
+        <select id="editItemCategory">
+
+            <option value="">Select category</option>
+
+            <option value="fruits">
+                Fruits
+            </option>
+
+            <option value="vegetables">
+                Vegetables
+            </option>
+
+            <option value="dairy">
+                Dairy
+            </option>
+
+            <option value="staples">
+                Staples
+            </option>
+
+        </select>
+
+        <div class="modal-buttons">
+
+            <button class="cancel-button" id="cancelEditButton">
+                Cancel
+            </button>
+
+            <button class="save-button" id="saveEditButton">
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

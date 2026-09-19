@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Pantry & Grocery Planner</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            🛒 Smart Pantry
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="pantry.html">Pantry</a>
+            <a href="shopping-list.html">Shopping List</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="hero">
+
+            <h1>Smart Pantry & Grocery Planner</h1>
+
+            <p>
+                Manage your pantry, plan your meals, and shop smarter.
+            </p>
+
+        </section>
+
+
+        <section class="dashboard">
+
+            
+            <div class="summary-card">
+                <h3>Pantry Items</h3>
+                <p id="pantryCount">0</p>
+            </div>
+
+            <div class="summary-card">
+                <h3>Shopping Items</h3>
+                <p id="shoppingCount">0</p>
+            </div>
+
+
+        </section>
+
+        <section class="quick-actions">
+
+            <div class="action-card">
+
+                <div class="icon">🥫</div>
+
+                <h2>Pantry Management</h2>
+
+                <p>
+                    Add and manage the grocery items currently
+                    available in your pantry.
+                </p>
+
+                <button onclick="window.location.href='pantry.html'">
+                    Manage Pantry
+                </button>
+            </div>
+
+
+            <div class="action-card">
+
+                <div class="icon">🛒</div>
+
+                <h2>Shopping List</h2>
+
+                <p>
+                    Create and manage the grocery items that
+                    you need to purchase.
+                </p>
+
+                <button onclick="window.location.href='shopping-list.html'">
+                    View Shopping List
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 Smart Pantry & Grocery Planner
+        </p>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+</html>

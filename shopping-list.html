@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping List - FreshCart</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <span class="logo-icon">🛒</span>
+
+            <span>
+                Fresh<span class="green">Cart</span>
+            </span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="pantry.html">
+                Pantry
+            </a>
+
+            <a href="shopping-list.html" class="active">
+                Shopping List
+            </a>
+
+        </nav>
+
+
+        <a href="index.html" class="nav-button">
+            Home
+        </a>
+
+    </header>
+
+
+
+    <!-- Shopping List Header -->
+
+    <section class="shopping-header">
+
+        <div>
+
+            <span class="small-title">
+                YOUR SHOPPING
+            </span>
+
+            <h1>
+                My <span>Shopping List</span>
+            </h1>
+
+            <p>
+                Keep track of the groceries you need
+                to buy on your next shopping trip.
+            </p>
+
+        </div>
+
+
+        <div class="shopping-icon">
+            🛍️
+        </div>
+
+    </section>
+
+
+
+    <!-- Shopping List Container -->
+
+    <section class="shopping-container">
+
+
+        <div class="shopping-top">
+
+            <div>
+
+                <h2>
+                    Items to Buy
+                </h2>
+
+                <p>
+                    Add items and mark them as purchased.
+                </p>
+
+            </div>
+
+
+            <button
+                class="add-button"
+                id="addShoppingItemButton"
+            >
+                + Add Item
+            </button>
+
+        </div>
+
+
+
+        <!-- Progress -->
+
+        <div class="shopping-progress">
+
+            <div class="progress-info">
+
+                <span>
+                    Shopping Progress
+                </span>
+
+                <span id="progressText">
+                    0 / 0 completed
+                </span>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div
+                    class="progress-fill"
+                    id="progressFill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Shopping Items -->
+
+        <div
+            class="shopping-list"
+            id="shoppingList"
+        >
+
+
+            
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Add Shopping Item Modal -->
+
+    <div
+        class="modal"
+        id="shoppingModal"
+    >
+
+        <div class="modal-content">
+
+
+            <button
+                class="close-modal"
+                id="closeShoppingModal"
+            >
+                &times;
+            </button>
+
+
+            <h2>
+                Add Shopping Item
+            </h2>
+
+
+            <p class="modal-description">
+                Add a grocery item to your shopping list.
+            </p>
+
+
+            <label for="shoppingItemName">
+                Item Name
+            </label>
+
+
+            <input
+                type="text"
+                id="shoppingItemName"
+                placeholder="Example: Bananas"
+            >
+
+
+            <label for="shoppingItemCategory">
+                Category
+            </label>
+
+
+            <select id="shoppingItemCategory">
+
+                <option value="">
+                    Select category
+                </option>
+
+                <option value="Fruits">
+                    Fruits
+                </option>
+
+                <option value="Vegetables">
+                    Vegetables
+                </option>
+
+                <option value="Dairy">
+                    Dairy
+                </option>
+
+                <option value="Staples">
+                    Staples
+                </option>
+
+            </select>
+
+
+            <div class="modal-buttons">
+
+                <button
+                    class="cancel-button"
+                    id="cancelShoppingButton"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    class="save-button"
+                    id="saveShoppingButton"
+                >
+                    Add Item
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Edit Shopping Item Modal -->
+
+<div
+    class="modal"
+    id="editShoppingModal"
+>
+
+    <div class="modal-content">
+
+        <button
+            class="close-modal"
+            id="closeEditShoppingModal"
+        >
+            &times;
+        </button>
+
+        <h2>
+            Edit Shopping Item
+        </h2>
+
+        <p class="modal-description">
+            Update your shopping item.
+        </p>
+
+        <label for="editShoppingItemName">
+            Item Name
+        </label>
+
+        <input
+            type="text"
+            id="editShoppingItemName"
+            placeholder="Example: Bananas"
+        >
+
+        <label for="editShoppingItemCategory">
+            Category
+        </label>
+
+        <select id="editShoppingItemCategory">
+
+            <option value="">
+                Select category
+            </option>
+
+            <option value="Fruits">
+                Fruits
+            </option>
+
+            <option value="Vegetables">
+                Vegetables
+            </option>
+
+            <option value="Dairy">
+                Dairy
+            </option>
+
+            <option value="Staples">
+                Staples
+            </option>
+
+        </select>
+
+        <div class="modal-buttons">
+
+            <button
+                class="cancel-button"
+                id="cancelEditShoppingButton"
+            >
+                Cancel
+            </button>
+
+            <button
+                class="save-button"
+                id="saveEditShoppingButton"
+            >
+                Save Changes
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <div class="footer-logo">
+            🛒 Fresh<span>Cart</span>
+        </div>
+
+
+        <p>
+            Shop smarter. Stay organized. Live fresher.
+        </p>
+
+
+        <p class="copyright">
+            © 2026 FreshCart. Grocery shopping made simple.
+        </p>
+
+    </footer>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="JS/app.js"></script>
+
+</body>
+
+</html>
