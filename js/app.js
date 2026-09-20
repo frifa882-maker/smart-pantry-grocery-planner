@@ -4,40 +4,12 @@
 
 let pantryItems = JSON.parse(localStorage.getItem("pantryItems")) || [];
 
-if (pantryItems.length === 3) {
-
-    pantryItems.push(
-        {
-            name: "Apples",
-            category: "fruits"
-        },
-        {
-            name: "Milk",
-            category: "dairy"
-        },
-        {
-            name: "Rice",
-            category: "staples"
-        },
-        {
-            name: "Carrots",
-            category: "vegetables"
-        },
-        {
-            name: "Eggs",
-            category: "dairy"
-        },
-        {
-            name: "Tomatoes",
-            category: "vegetables"
-        }
-    );
 
     localStorage.setItem(
         "pantryItems",
         JSON.stringify(pantryItems)
     );
-}
+
 
 let shoppingItems = JSON.parse(localStorage.getItem("shoppingItems")) || [];
 
