@@ -1,4 +1,4 @@
-const CACHE_NAME = "smart-pantry-v1";
+const CACHE_NAME = "smart-pantry-v2";
 
 const FILES_TO_CACHE = [
     "index.html",
